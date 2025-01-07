@@ -1,8 +1,42 @@
 // script.js
-document.getElementById('characterForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    generatePDF();
+document.addEventListener('DOMContentLoaded', (event) => {
+    loadFormData();
+
+    document.getElementById('characterForm').addEventListener('input', function() {
+        saveFormData();
+    });
+
+    document.getElementById('characterForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        generatePDF();
+    });
 });
+
+function saveFormData() {
+    const form = document.getElementById('characterForm');
+    const formData = new FormData(form);
+    const character = {};
+    formData.forEach((value, key) => {
+        character[key] = value;
+    });
+
+    localStorage.setItem('characterData', JSON.stringify(character));
+}
+
+function loadFormData() {
+    const savedData = localStorage.getItem('characterData');
+    if (savedData) {
+        const character = JSON.parse(savedData);
+        for (const key in character) {
+            if (character.hasOwnProperty(key)) {
+                const element = document.getElementById(key);
+                if (element) {
+                    element.value = character[key];
+                }
+            }
+        }
+    }
+}
 
 function generatePDF() {
     const form = document.getElementById('characterForm');
