@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fiche Personnage</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Créer une Fiche Personnage</h1>
+        <form id="characterForm">
+            <h2>Informations de base</h2>
+            <input type="text" id="name" placeholder="Nom du personnage" required>
+            <input type="text" id="age" placeholder="Âge ou date de naissance" required>
+            <input type="text" id="gender" placeholder="Sexe et orientation sexuelle" required>
+            <textarea id="appearance" placeholder="Apparence physique" required></textarea>
+            <input type="text" id="profession" placeholder="Profession ou rôle" required>
+            <input type="text" id="nickname" placeholder="Citée ou surnom">
+
+            <h2>Personnalité</h2>
+            <textarea id="personality" placeholder="Traits de caractère" required></textarea>
+            <textarea id="strengths" placeholder="Forces" required></textarea>
+            <textarea id="weaknesses" placeholder="Faiblesses" required></textarea>
+            <textarea id="goals" placeholder="Objectifs et motivations" required></textarea>
+            <textarea id="fears" placeholder="Peurs et faiblesses" required></textarea>
+            <textarea id="values" placeholder="Valeurs et croyances" required></textarea>
+
+            <h2>Histoire personnelle</h2>
+            <textarea id="backstory" placeholder="Passé du personnage" required></textarea>
+            <textarea id="keyEvents" placeholder="Événements clés" required></textarea>
+            <textarea id="conflicts" placeholder="Conflits internes ou extérieurs" required></textarea>
+
+            <h2>Relations</h2>
+            <textarea id="relationships" placeholder="Amis, ennemis, et relations importantes" required></textarea>
+            <textarea id="dynamics" placeholder="Dynamique entre le personnage et les autres" required></textarea>
+            <textarea id="loveFamily" placeholder="Relations amoureuses ou familiales" required></textarea>
+
+            <h2>Développement et arc narratif</h2>
+            <textarea id="development" placeholder="Évolution du personnage" required></textarea>
+            <textarea id="longTermGoals" placeholder="Objectifs à long terme" required></textarea>
+            <textarea id="keyQuotes" placeholder="Citation ou réplique clé" required></textarea>
+
+            <h2>Autres détails</h2>
+            <textarea id="distinctive" placeholder="Apparence ou comportement distinctif" required></textarea>
+            <textarea id="hobbies" placeholder="Passions ou hobbies" required></textarea>
+            <textarea id="significantObjects" placeholder="Souvenirs ou objets significatifs" required></textarea>
+
+            <h2>Image</h2>
+            <input type="file" id="image" accept="image/*" required>
+
+            <button type="submit">Créer la fiche personnage</button>
+        </form>
+        <div id="preview"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
